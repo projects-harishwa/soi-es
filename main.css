@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	background: url(bg.gif);
+	background-repeat: none;
+	background-size: cover;
+	background-attachment: fixed;
+  	-webkit-tap-highlight-color: transparent;
+	overflow-x: hidden;
+}
+
+
+.box1
+{
+	color: #fff;
+	font-family: sans-serif;
+	height: auto;
+	width: 250px;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	top: 60%;
+	left: 10%;
+	opacity: 20%;
+	transition: 0.5s ease-out;
+	outline: 1px solid white;
+	background: -webkit-linear-gradient(#fff,#999);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 10px 10px;
+	border-radius: 10px;
+	z-index: 1;
+}
+.box1:hover
+{
+	opacity: 80%;
+
+}
+.box2
+{
+	color: #fff;
+	font-family: sans-serif;
+	height: auto;
+	width: 250px;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	top: 20%;
+	left: 70%;
+	opacity: 30%;
+	transition: 0.5s ease-out;
+	outline: 1px solid white;
+	background: -webkit-linear-gradient(#999,#fff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 10px 10px;
+	border-radius: 10px;
+	z-index: -1;
+}
+.box2:hover
+{
+	opacity: 60%;
+
+}
+.navbar
+{
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	height: 100%;
+	display: none;
+
+}
+.navbar .nav  
+{
+	outline: 1px solid black;
+	backdrop-filter: blur(10px);
+}
+.navbar ul {
+	color: #fff;
+}
+.navbar a  
+{
+	padding: 20px 20px;
+	color: #fff;
+	display: flex;
+	text-decoration: none;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-weight: 500;
+	font-family: "Red Hat Display", serif;
+}
+#menuList
+{
+	transition: 0.2s;
+	overflow: hidden;
+	opacity: 0%;
+	min-width: -10;
+	position: absolute;
+	z-index: 2;
+	height: 100vh;
+}
+
+button
+{
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	margin: -2em 2em;
+	background: none;
+	outline: none;
+	border: none;
+	transition: 0.2s;
+	cursor: pointer;
+}
+button li 
+{
+	list-style: none;
+}
+button ion-icon
+{
+	font-size: 3em;
+	color: #fff;
+	margin-top: -20em;
+}
+#arrow1,#arrow2
+{
+	transition: 0.3s;
+}
+.line1
+{
+	transform: rotate(45deg)translateY(10px)translateX(-10px);
+}
+.line2
+{
+	transform: rotate(-45deg)translate(4px,10px);
+	margin-top: -20px;
+	margin-left: -2px;
+}
+header
+{
+	display: flex;
+	position: fixed;
+	top: 5%;
+	right: 0;
+	padding: 10;
+}
+header ion-icon
+{
+	color: #fff;
+	font-size: 1.2em;
+	padding: 0em 2em;
+	cursor: pointer;
+}
+h1
+{
+	position: fixed;
+	top: 5%;
+	left: 10%;
+	transform: translate(-50%,-50%)rotateX(5deg);
+	color: #fff;
+	font-family: "Red Hat Display", serif;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	margin-top: 10px;
+	background: -webkit-linear-gradient(#fff,#999);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+nav
+{
+	position: fixed;
+	top: 5%;
+	right: 10%;
+	backdrop-filter: blur(50px);
+	z-index: 2;
+	padding: 5px 5px;
+	border-radius: 10px;
+
+}
+nav ul 
+{
+	display: flex;
+	gap:50px;
+}
+nav ul a
+{
+	color: #fff;
+	text-decoration: none;
+	font-family: "Red Hat Display", serif;
+	padding: 5px 10px;
+
+}
+nav ul a.active
+{
+	outline: 1px solid;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+.heading
+{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 2;
+	transition: 0.2s;
+}
+.heading h2
+{
+	font-family: "Red Hat Display", serif;
+	color: #fff;
+	font-size: 1em;
+	text-align: center;
+	cursor: url(circle-outline.svg),auto;
+}
+.heading span 
+{
+	font-size: clamp(1.5rem, 4vw, 20rem);
+	background: -webkit-linear-gradient(right,#fff,#999);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: url(circle-outline.svg),auto;
+}
+.heading .button
+{
+	text-align: center;
+	color: #000;
+	font-size: 1.1em;
+	font-weight: 600;
+	background: -webkit-linear-gradient(right,#fff,#999);
+	padding: 8px;
+	font-family: "Red Hat Display", serif;
+	border-radius: 10px;
+	width: 40%;
+	cursor: url(circle-outline.svg),auto;
+	transition: 0.5s ease-out;
+
+}
+.button ion-icon
+{
+	font-size: 0.9em;
+	transform: translateY(2px)translateX(5px);
+	animation: star 8s infinite ease-in-out;
+}
+@keyframes star 
+{
+	0%
+	{
+		transform:  translateY(2px)translateX(5px)rotate(0deg);
+	}
+	100%
+	{
+		transform:  translateY(2px)translateX(5px)rotate(720deg);
+	}
+}
+.news{
+	position: absolute;
+	top: 140%;
+	left: 50%;
+	transform: translate(-50%,-50%)scale(0.8);
+	filter: none !important;
+}
+.news img{
+	filter: none !important;
+	
+}
+#heading{
+	transition: 0.25s ease-out;
+}
+#button{
+	transition: 0.25s;
+	position: absolute;
+}
+
+.headinganim{
+	margin-top: -200%;
+	opacity: 0%;
+
+}
+.leaderboards{
+	opacity: 0%;
+	
+
+}
+@media (max-width:480px)
+{
+	video
+	{
+		aspect-ratio: 9/16;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.box1
+	{
+/*		position: fixed;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%,-50%) scale(0.8)rotate3d(10, 50, 80, 90deg)rotate(-70deg);
+		pointer-events: none;
+		opacity: 40%;
+		z-index: -2;*/
+		display: none;
+	}
+	.box2
+	{
+/*		position: fixed;
+		top: 60%;
+		left: 50%;
+		transform: translate(-50%,-50%) scale(0.8)rotate3d(10, 10, 1, 20deg)scaleX(0.78)translateX(-35px)translateY(-25px);
+		pointer-events: none;
+		opacity: 40%;
+		z-index: -2;*/
+		display: none;
+	}
+	#menuList
+	{
+		width: 100%;
+		z-index:2;
+
+	}
+
+	button
+	{
+		transform: scale(0.7);
+	}
+	.navbar
+	{
+		display: block;
+		z-index: 2;
+	}
+	nav{
+		display: none;
+
+	}
+	h1
+	{
+		position: fixed;
+		text-align: center;
+		left: 50%;
+	}
+	.heading
+	{
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.heading h2
+	{
+		font-size: 0.8em;
+	}
+	.heading span 
+	{
+		font-size: 4em;
+	}
+	.heading .button
+	{
+		width: 60%;
+		font-size: 0.9em;
+		transform: scale(0.8);
+	}
+	.news{
+		position: absolute;
+		top: 100%;
+		transform: translate(-50%,-50%)scale(0.35);
+	}
+
+
+}
+@media (min-width:481px) and (max-width: 800px)
+{
+	video
+	{
+		aspect-ratio: 4/5;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	
+	.works{
+		z-index: 999;
+		position: absolute;
+		top:220%;
+		left: 50%;
+		padding: none;
+		transform: translate(-50%,-50%)scale(0.7);
+		margin-top: 10px;
+	}
+	.row1,.row2{
+		display: block;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.mograph{
+		height: 315px;
+		width: 560px;
+	}
+	.navbar{
+		display: block;
+	}
+	nav{
+		display: none;
+	}
+	h1
+	{
+		position: fixed;
+		text-align: center;
+		left: 50%;
+	}
+	.box1{
+		display: none;
+	}
+	.box2{
+		display: none;
+	}
+	#menuList
+	{
+		width: 100%;
+		z-index:2;
+
+	}
+
+	button
+	{
+		transform: scale(0.7);
+	}
+	.heading span 
+	{
+		font-size: 4em;
+	}
+	.heading .button
+	{
+		width: 50%;
+		font-size: 0.9em;
+		transform: scale(0.8);
+	}
+	.news{
+		transform: translate(-50%,-50%)scale(0.5);
+	}
+}
