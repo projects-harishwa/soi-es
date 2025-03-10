@@ -135,9 +135,38 @@
 			</div>
 		</div>
 
-		<div class="rdm-btn">View Embedded Roadmap</div>
-	</div>
+		<div class="rdm-btn" onclick="opening()">View Embedded Roadmap</div>
+		<div class="photo" id="roadmap">
+			<span onclick="closing_road()">Close <ion-icon name="close-outline"></ion-icon></span>
+			<img  src="roadmap.png">
+		</div>
+	</div><!-----------------Over here--------------------------------------->
 
+
+	<div class="footer">
+
+		<div class="images">
+			<img src="soi.png">
+			<img src="opensource.png">
+		</div>
+
+
+		<ul>
+			<a href="#">Home</a>
+			<a href="#">Leaderboards</a>
+			<a href="#">Documentation</a>
+			<a href="#">Tech Blogs</a>
+		</ul>
+
+		<div class="location">
+			<span>Location</span>
+			<p>School of Innovation<br>IT Tower 5th Floor | B Wing<br>KGiSL Educational Institution</p>
+		</div>
+
+		<div class="last-line">
+			<span>Opensource Initiative</span> |  | Department of Embedded Systems , Devices & Automation
+		</div>
+	</div>
 
 	
 
@@ -222,6 +251,33 @@ addHoverEffect(document.querySelector('.button'));
 
    		}
     </script>
+
+	<script>
+		var roadmap=document.getElementById("roadmap");
+		roadmap.classList.add("close_roadmap");
+		
+		function opening()
+		{
+			
+			if(roadmap.style.maxHeight=="0px"){
+				roadmap.classList.add("close_roadmap");
+				roadmap.style.opacity="0%";
+			}
+			else{
+				roadmap.classList.remove("close_roadmap");
+				roadmap.style.opacity="100%";
+			}
+		}
+
+
+		function closing_road()
+		{
+			roadmap.classList.add("close_roadmap");
+			roadmap.style.opacity="0%";
+		}
+	</script>
+
+	
 
 
 
