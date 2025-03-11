@@ -177,17 +177,16 @@ h1
 	background: -webkit-linear-gradient(#fff,#999);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-
 }
 nav
 {
-	position: fixed;
+	position: absolute;
 	top: 5%;
-	right: 10%;
+	left: 50%;
 	backdrop-filter: blur(50px);
 	z-index: 2;
-	padding: 5px 5px;
 	border-radius: 10px;
+	width: 100%;
 
 }
 nav ul 
@@ -297,11 +296,12 @@ nav ul a.active
 {
 	position: absolute;
 	left: 50%;
-	top: 330%;
+	top: 370%;
 	transform: translate(-50%,-50%);
 	width: 100%;
 	background: #fff;
-	height: 1900px;
+	height: 2500px;
+	z-index: -2;
 }
 .embedded h4{
 	font-weight: 800;
@@ -343,7 +343,7 @@ nav ul a.active
 }
 .rdm-btn{
 	position: absolute;
-	top: 95%;
+	top: 75%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	color: #fff;
@@ -354,16 +354,22 @@ nav ul a.active
 	font-family: "Red Hat Display", serif;
 	border-radius: 30px;
 	cursor: pointer;
+	transition: 0.5s;
 }
+.rdm-btn:hover{
+	box-shadow: 1px 1px 30px black;
+}
+
 .footer{
 	background: #f1f1f1;
 	position: absolute;
-	top: 490%;
+	top: 540%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	height: 500px;
+	height: 600px;
 	width: 100%;
 	z-index: -1;
+	bottom: 0%;
 }
 .footer ul 
 {
@@ -429,6 +435,7 @@ nav ul a.active
 	transform: translate(-50%,-50%);
 	background: #fff;
 	box-shadow: 10px 10px 50px black;
+	z-index: 999;
 }
 .photo span 
 {
@@ -460,7 +467,6 @@ nav ul a.active
 {
 	transition: 0.5s;
 }
-
 
 
 @media (max-width:767px)
@@ -815,3 +821,130 @@ nav ul a.active
 		margin-top: -80px;
 	}
 }
+
+@media (min-width:1200px) and (max-width: 1919px){
+	.news{
+		transform: translate(-50%,-50%)scale(0.7);
+	}
+	.embedded{
+		margin-top: 150px;
+	}
+	.footer{
+		margin-top: 180px;
+	}
+}
+@media (min-width:992px) and (max-width: 1199px)
+{
+	.heading .button
+	{
+		font-size: 0.8em;
+	}
+	.news{
+		transform: translate(-50%,-50%)scale(0.7);
+		margin-top: 50px;
+	}
+	.embedded 
+	{
+		margin-top: 200px;
+	}
+	.footer 
+	{
+		margin-top: 220px;
+	}
+	.rdm-btn 
+	{
+		margin-top: 70px;
+	}
+}
+@media (min-width:768px) and (max-width: 991px)
+{
+	nav{
+		display: none;
+	}
+	.navbar 
+	{
+		display: block;
+	}
+	h1 
+	{
+		position: fixed;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.embedded
+	{
+		position: absolute;
+		margin-top: -10%;
+		height: 2500px;
+	}
+	.rdm-btn
+	{
+		margin-top: 30%;
+	}
+	.footer{
+		margin-top: -10%;
+	}
+}
+@media (min-width:440px) and (max-width: 767px)
+{
+	.heading .button{
+		font-size: 0.8em;
+	}
+	.news{
+		transform: translate(-50%,-50%)scale(0.35);
+	}
+	.embedded
+	{
+		margin-top: -280%;
+	}
+	.rdm-btn{
+		width: 40%;
+		text-align: center;
+	}
+	.item1 img{
+		display: none;
+	}
+}
+@media  (min-width:390px) and (max-width:420px)
+{
+	.embedded
+	{
+		margin-top: -220%;
+	}
+	.footer{
+		margin-top: -420%;
+	}
+}
+@media  (min-width:360px) and (max-width:389px)
+{
+	.rdm-btn 
+	{
+		width: 50%;
+		text-align: center;
+		margin-top: 50%;
+	}
+}
+@media  (min-width:992px) and (max-width:1030px)
+{
+	.rdm-btn{
+		margin-top: 20%;
+	}
+	.embedded{
+		height: 2500px;
+	}
+	.footer 
+	{
+		margin-top: 10%;
+	}
+	nav{
+		display: none;
+	}
+	.navbar{
+		display: block;
+	}
+	h1{
+		position: fixed;
+		left: 50%;
+	}
+}
+@media  (min-width:390px) and (max-width:4px)
